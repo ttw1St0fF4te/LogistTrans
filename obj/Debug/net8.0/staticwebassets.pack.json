@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets/favicon.ico"
     },
     {
+      "Id": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/wwwroot/img/LT_Back.jpg",
+      "PackagePath": "staticwebassets/img/LT_Back.jpg"
+    },
+    {
       "Id": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/wwwroot/js/site.js",
       "PackagePath": "staticwebassets/js/site.js"
     },

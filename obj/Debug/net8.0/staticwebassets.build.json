@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "ZzRv4+U5Me486uJK9DiNQ+jners8ZVob9ZnfcgrILO8=",
+  "Hash": "7hM5l2GhFjqVBflYh7LOcQfCDBZwM/lTDy3EaCMr1pI=",
   "Source": "LogistTrans",
   "BasePath": "_content/LogistTrans",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/favicon.ico"
+    },
+    {
+      "Identity": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/wwwroot/img/LT_Back.jpg",
+      "SourceId": "LogistTrans",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/wwwroot/",
+      "BasePath": "_content/LogistTrans",
+      "RelativePath": "img/LT_Back.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/img/LT_Back.jpg"
     },
     {
       "Identity": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/wwwroot/js/site.js",
