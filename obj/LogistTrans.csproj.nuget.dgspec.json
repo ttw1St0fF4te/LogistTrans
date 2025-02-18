@@ -1,0 +1,85 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/LogistTrans.csproj": {}
+  },
+  "projects": {
+    "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/LogistTrans.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/LogistTrans.csproj",
+        "projectName": "LogistTrans",
+        "projectPath": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/LogistTrans.csproj",
+        "packagesPath": "/Users/keluch/.nuget/packages/",
+        "outputPath": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/keluch/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[8.0.11, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/8.0.403/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
