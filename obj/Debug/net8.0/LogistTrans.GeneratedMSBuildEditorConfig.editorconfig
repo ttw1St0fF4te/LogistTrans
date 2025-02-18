@@ -38,6 +38,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_AdminNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19BZG1pbk5hdi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_ClientNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19DbGllbnROYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_DriverNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Ecml2ZXJOYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_LogistNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpc3ROYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_RoleBasedNav.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Sb2xlQmFzZWROYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 

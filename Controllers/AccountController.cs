@@ -5,6 +5,9 @@ namespace LogistTrans.Controllers;
 
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,6 +91,30 @@ public class AccountController : Controller
 
             if (userLogin != null && userLogin.PassHash == ComputeSha256Hash(model.Password))
             {
+                // Получаем роль пользователя
+                string roleName = userLogin.Role.RoleName;
+
+                // Создаем список Claims
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, userLogin.Login), // Логин пользователя
+                    new Claim(ClaimTypes.Role, roleName),       // Роль пользователя
+                    new Claim("UserId", userLogin.Id.ToString()) // ID пользователя
+                };
+
+                // Создаем ClaimsIdentity
+                var claimsIdentity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+
+                // Аутентифицируем пользователя
+                await HttpContext.SignInAsync(
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    new AuthenticationProperties
+                    {
+                        IsPersistent = true, // Сессия будет сохраняться после закрытия браузера
+                        ExpiresUtc = DateTime.UtcNow.AddHours(1) // Время жизни сессии
+                    });
+
                 // Успешная аутентификация, перенаправление на главную страницу
                 return RedirectToAction("Index", "Home");
             }
@@ -96,9 +123,16 @@ public class AccountController : Controller
                 ModelState.AddModelError("", "Неверный логин или пароль.");
             }
         }
+
         return View(model);
     }
 
+    [HttpPost]
+    public async Task<IActionResult> Logout()
+    {
+        await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+        return RedirectToAction("Index", "Home");
+    }
 
     private string ComputeSha256Hash(string rawData)
     {

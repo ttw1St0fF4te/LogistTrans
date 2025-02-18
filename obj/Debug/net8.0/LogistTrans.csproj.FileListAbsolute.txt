@@ -109,3 +109,10 @@
 /Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll
 /Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/obj/Debug/net8.0/LogistTrans.sourcelink.json
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/Microsoft.Extensions.Diagnostics.Abstractions.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/Microsoft.Extensions.Hosting.Abstractions.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/Microsoft.Extensions.ObjectPool.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/Microsoft.Extensions.WebEncoders.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/System.Security.Cryptography.Pkcs.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/System.Security.Cryptography.Xml.dll
+/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/bin/Debug/net8.0/runtimes/win/lib/net8.0/System.Security.Cryptography.Pkcs.dll
