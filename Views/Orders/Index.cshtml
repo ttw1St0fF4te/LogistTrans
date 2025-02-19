@@ -1,0 +1,39 @@
+@model IEnumerable<Order>
+
+<h2>Мои заказы</h2>
+
+@if (ViewBag.Message != null)
+{
+<p>@ViewBag.Message</p>
+}
+else
+{
+<table class="table">
+    <thead>
+    <tr>
+        <th>Дата заказа</th>
+        <th>Дата доставки</th>
+        <th>Статус</th>
+        <th>Товары</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var order in Model)
+    {
+    <tr>
+        <td>@order.OrderDate</td>
+        <td>@order.DeliveryDate</td>
+        <td>@order.Status</td>
+        <td>
+            <ul>
+                @foreach (var item in order.OrderItems)
+                {
+                <li>@item.Product.Name (Количество: @item.Quantity)</li>
+                }
+            </ul>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+}

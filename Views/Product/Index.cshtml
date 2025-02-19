@@ -1,0 +1,36 @@
+@model IEnumerable<Product>
+
+<h2>Товары</h2>
+
+@if (ViewBag.Message != null)
+{
+<p>@ViewBag.Message</p>
+}
+else
+{
+<table class="table">
+    <thead>
+    <tr>
+        <th>Название</th>
+        <th>Количество</th>
+        <th>Местоположение</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var product in Model)
+    {
+    <tr>
+        <td>@product.Name</td>
+        <td>@product.Quantity</td>
+        <td>@product.Location</td>
+        <td>
+            <div class="d-flex gap-2 justify-content-center">
+                @await Html.PartialAsync("_ProductActions", product)
+            </div>
+        </td>
+    </tr>
+    }
+    </tbody>
+</table>
+}

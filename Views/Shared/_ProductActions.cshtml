@@ -1,0 +1,29 @@
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+@model Product
+
+@{
+    var context = HttpContextAccessor.HttpContext;
+    var user = context.User;
+}
+
+@if (user.Identity.IsAuthenticated)
+{
+    if (user.IsInRole("logist"))
+    {
+        <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Удалить</a>
+        <a asp-action="Create" class="btn btn-primary">Добавить товар</a>
+    }
+    else if (user.IsInRole("client"))
+    {
+        <form asp-action="Order" method="post">
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <!-- Явно указываем метку на русском языке -->
+                <label for="Quantity" class="form-label">Количество</label>
+                <input type="number" asp-for="Quantity" class="form-control" id="Quantity" min="1" required />
+            </div>
+            <button type="submit" class="btn btn-success">Заказать</button>
+        </form>
+    }
+}

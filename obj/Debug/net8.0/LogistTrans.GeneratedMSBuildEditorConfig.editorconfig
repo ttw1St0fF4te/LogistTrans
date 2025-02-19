@@ -34,6 +34,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Orders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvT3JkZXJzL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -52,6 +64,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_LogistNav.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Mb2dpc3ROYXYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_ProductActions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19Qcm9kdWN0QWN0aW9ucy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Shared/_RoleBasedNav.cshtml]
