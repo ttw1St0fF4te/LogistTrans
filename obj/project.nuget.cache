@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P/hm6RMJ4ZY=",
+  "dgSpecHash": "JHD+lFqSHxY=",
   "success": true,
   "projectFilePath": "/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/LogistTrans.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "/Users/keluch/.nuget/packages/mono.texttemplating/2.2.1/mono.texttemplating.2.2.1.nupkg.sha512",
     "/Users/keluch/.nuget/packages/npgsql/8.0.6/npgsql.8.0.6.nupkg.sha512",
     "/Users/keluch/.nuget/packages/npgsql.entityframeworkcore.postgresql/8.0.11/npgsql.entityframeworkcore.postgresql.8.0.11.nupkg.sha512",
+    "/Users/keluch/.nuget/packages/questpdf/2025.1.2/questpdf.2025.1.2.nupkg.sha512",
     "/Users/keluch/.nuget/packages/system.buffers/4.6.0/system.buffers.4.6.0.nupkg.sha512",
     "/Users/keluch/.nuget/packages/system.codedom/4.4.0/system.codedom.4.4.0.nupkg.sha512",
     "/Users/keluch/.nuget/packages/system.collections.immutable/6.0.0/system.collections.immutable.6.0.0.nupkg.sha512",
