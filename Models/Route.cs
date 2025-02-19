@@ -5,13 +5,9 @@ namespace LogistTrans.Models;
 public class Route
 {
     public int Id { get; set; }
-
     public double Distance { get; set; }
-
     public DateTime DepartureTime { get; set; }
-
     public TimeSpan TravelTime { get; set; }
-
     public DateTime ArrivalTime { get; set; }
 
     [ForeignKey("Order")]

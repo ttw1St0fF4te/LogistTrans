@@ -74,16 +74,26 @@ public class RouteController : Controller
             return View(route);
         }
 
-        // Update order status to "В пути"
+        // Обновляет статус заказа на "В пути"
         selectedOrder.Status = "В пути";
 
-        // Populate route fields from the selected order
-        route.Distance = new Random().Next(100, 1000); // Example: Random distance from 100 to 1000 km
+        // Автоматическое заполнение
+        route.Distance = new Random().Next(100, 1000);
         route.DepartureTime = selectedOrder.OrderDate;
         route.ArrivalTime = selectedOrder.DeliveryDate;
         route.TravelTime = route.ArrivalTime - route.DepartureTime;
 
         _context.Routes.Add(route);
+        await _context.SaveChangesAsync();
+        
+        var notification = new Notification
+        {
+            Message = "Товар в пути",
+            SentDate = DateTime.UtcNow,
+            ClientId = selectedOrder.ClientId,
+            OrderId = selectedOrder.Id
+        };
+        _context.Notifications.Add(notification);
         await _context.SaveChangesAsync();
 
         ViewData["OrderId"] = new SelectList(await _context.Orders.ToListAsync(), "Id", "Id", route.OrderId);

@@ -1,0 +1,21 @@
+@model IEnumerable<LogistTrans.Models.Notification>
+
+<h2>Уведомления</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Сообщение</th>
+        <th>Дата отправки</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var notification in Model)
+    {
+        <tr>
+            <td>@notification.Message</td>
+            <td>@notification.SentDate.ToString("yyyy-MM-dd HH:mm")</td>
+        </tr>
+    }
+    </tbody>
+</table>

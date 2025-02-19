@@ -1,4 +1,5 @@
 using LogistTrans.Context;
+using LogistTrans.Models;
 
 namespace LogistTrans.Services;
 
@@ -38,12 +39,22 @@ public class OrderStatusUpdateService : BackgroundService
                 {
                     order.Status = "Доставлено";
                     _logger.LogInformation($"Order {order.Id} status updated to 'Доставлено'.");
+
+                    // Create and save the notification
+                    var notification = new Notification
+                    {
+                        Message = "Товар доставлен",
+                        SentDate = DateTime.UtcNow,
+                        ClientId = order.ClientId,
+                        OrderId = order.Id
+                    };
+                    context.Notifications.Add(notification);
                 }
 
                 await context.SaveChangesAsync();
             }
 
-            await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken); // Check every minute
+            await Task.Delay(TimeSpan.FromMinutes(1), stoppingToken);
         }
     }
 }

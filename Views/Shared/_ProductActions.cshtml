@@ -18,7 +18,6 @@
         <form asp-action="Order" method="post">
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <!-- Явно указываем метку на русском языке -->
                 <label for="Quantity" class="form-label">Количество</label>
                 <input type="number" asp-for="Quantity" class="form-control" id="Quantity" min="1" required />
             </div>

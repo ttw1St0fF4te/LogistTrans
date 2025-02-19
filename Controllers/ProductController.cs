@@ -84,7 +84,7 @@ public class ProductController : Controller
         var userIdClaim = User.FindFirst(ClaimTypes.Name);
         if (userIdClaim == null)
         {
-            return RedirectToAction("Login", "Account"); // Redirect to login page if Claim is not found
+            return RedirectToAction("Login", "Account");
         }
 
         var client = await _context.Clients
@@ -111,18 +111,26 @@ public class ProductController : Controller
             }
         };
 
-        // Logic for calculating the delivery date
-        var distance = new Random().Next(100, 1000); // Random distance from 100 to 1000 km
-        var speed = new Random().Next(50, 200); // Random speed from 50 to 200 km/h
+        var distance = new Random().Next(100, 1000); 
+        var speed = new Random().Next(50, 200);
         var deliveryTime = TimeSpan.FromHours(distance / (double)speed);
         order.DeliveryDate = order.OrderDate.Add(deliveryTime);
 
-        // Decrease the product quantity
         product.Quantity -= quantity;
 
         _context.Orders.Add(order);
         await _context.SaveChangesAsync();
+        
+        var notification = new Notification
+        {
+            Message = "Товар заказан",
+            SentDate = DateTime.UtcNow,
+            ClientId = client.Id,
+            OrderId = order.Id
+        };
+        _context.Notifications.Add(notification);
+        await _context.SaveChangesAsync();
 
-        return RedirectToAction("Index", "Orders"); // Redirect to the orders page
+        return RedirectToAction("Index", "Orders");
     }
 }

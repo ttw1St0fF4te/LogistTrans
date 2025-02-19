@@ -1,0 +1,33 @@
+@model IEnumerable<LogistTrans.Models.Notification>
+
+<h2>Уведомления</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Сообщение</th>
+        <th>Дата отправки</th>
+        <th>Клиент</th>
+        <th>Заказ</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var notification in Model)
+    {
+        <tr>
+            <td>@notification.Message</td>
+            <td>@notification.SentDate.ToString("yyyy-MM-dd HH:mm")</td>
+            <td>@notification.Client.LastName</td>
+            <td>@notification.Order.Id</td>
+            <td>
+                <a asp-action="Delete" asp-route-id="@notification.Id" class="btn btn-danger btn-sm">Удалить</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Создать новое уведомление</a>
+</p>
