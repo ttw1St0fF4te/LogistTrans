@@ -1,24 +1,45 @@
 @model LogistTrans.Controllers.ReportData
 
-<h2>Отчеты</h2>
+@{
+    ViewData["Title"] = "Отчеты";
+}
 
-<div>
-    <h3>Общая статистика</h3>
-    <p>Всего продано товаров: @Model.TotalProductsSold</p>
-    <p>Всего клиентов: @Model.TotalClients</p>
-    <p>Активных клиентов: @Model.ActiveClients</p>
-    <p>Всего водителей: @Model.TotalDrivers</p>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Отчеты</h2>
 
-    <h3>Загруженность водителей</h3>
-    <ul>
-        @foreach (var workload in Model.DriverWorkload)
-        {
-            <li>Водитель @workload.DriverId: @workload.RouteCount маршрутов</li>
-        }
-    </ul>
-</div>
+    <!-- Блок с общей статистикой -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Общая статистика</h3>
+        </div>
+        <div class="card-body">
+            <p class="mb-2"><strong>Всего продано товаров:</strong> @Model.TotalProductsSold</p>
+            <p class="mb-2"><strong>Всего клиентов:</strong> @Model.TotalClients</p>
+            <p class="mb-2"><strong>Активных клиентов:</strong> @Model.ActiveClients</p>
+            <p class="mb-0"><strong>Всего водителей:</strong> @Model.TotalDrivers</p>
+        </div>
+    </div>
 
-<div>
-    <a asp-action="ExportCsv" class="btn btn-primary">Экспортировать в CSV</a>
-    <a asp-action="ExportPdf" class="btn btn-primary">Экспортировать в PDF</a>
+    <!-- Блок с загруженностью водителей -->
+    <div class="card mb-4">
+        <div class="card-header bg-primary text-white">
+            <h3 class="mb-0">Загруженность водителей</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group list-group-flush">
+                @foreach (var workload in Model.DriverWorkload)
+                {
+                    <li class="list-group-item">
+                        Водитель <strong>@workload.DriverId</strong>: @workload.RouteCount маршрутов
+                    </li>
+                }
+            </ul>
+        </div>
+    </div>
+
+    <!-- Блок с кнопками экспорта -->
+    <div class="d-flex justify-content-center gap-3">
+        <a asp-action="ExportCsv" class="btn btn-success btn-lg">Экспортировать в CSV</a>
+        <a asp-action="ExportPdf" class="btn btn-danger btn-lg">Экспортировать в PDF</a>
+    </div>
 </div>

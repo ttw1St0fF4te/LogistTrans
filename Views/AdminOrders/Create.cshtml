@@ -1,17 +1,39 @@
 @model LogistTrans.Models.Order
 
-<h2>Создать заказ</h2>
+@{
+    ViewData["Title"] = "Создать заказ";
+}
 
-<form asp-action="Create">
-    <div class="form-group">
-        <label asp-for="ClientId"></label>
-        <select asp-for="ClientId" class="form-control" asp-items="ViewBag.ClientId"></select>
-        <span asp-validation-for="ClientId" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="DeliveryDate"></label>
-        <input asp-for="DeliveryDate" class="form-control" type="datetime-local" />
-        <span asp-validation-for="DeliveryDate" class="text-danger"></span>
-    </div>
-    <button type="submit" class="btn btn-primary">Создать</button>
-</form>
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Создать заказ</h2>
+    <form asp-action="Create" method="post" class="needs-validation" novalidate>
+        <!-- Поле Клиент -->
+        <div class="mb-3">
+            <label asp-for="ClientId" class="form-label">Клиент</label>
+            <select asp-for="ClientId" class="form-select" required>
+                <option value="" disabled selected>Выберите клиента</option>
+                @foreach (var client in ViewBag.ClientId)
+                {
+                    <option value="@client.Value">@client.Text</option>
+                }
+            </select>
+            <span asp-validation-for="ClientId" class="text-danger"></span>
+        </div>
+
+        <!-- Поле Дата доставки -->
+        <div class="mb-3">
+            <label asp-for="DeliveryDate" class="form-label">Дата доставки</label>
+            <input asp-for="DeliveryDate" class="form-control" type="datetime-local" required />
+            <span asp-validation-for="DeliveryDate" class="text-danger"></span>
+        </div>
+
+        <!-- Кнопка отправки -->
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-primary">Создать</button>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
