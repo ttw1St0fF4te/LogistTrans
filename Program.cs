@@ -1,4 +1,5 @@
 using LogistTrans.Context;
+using LogistTrans.Services;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.EntityFrameworkCore;
 
@@ -20,6 +21,9 @@ builder.Services.AddAuthentication(options =>
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddHttpContextAccessor();
+
+// Register the background service
+builder.Services.AddHostedService<OrderStatusUpdateService>();
 
 var app = builder.Build();
 

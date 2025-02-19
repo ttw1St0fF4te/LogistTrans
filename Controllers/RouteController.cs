@@ -74,6 +74,9 @@ public class RouteController : Controller
             return View(route);
         }
 
+        // Update order status to "В пути"
+        selectedOrder.Status = "В пути";
+
         // Populate route fields from the selected order
         route.Distance = new Random().Next(100, 1000); // Example: Random distance from 100 to 1000 km
         route.DepartureTime = selectedOrder.OrderDate;
@@ -90,8 +93,9 @@ public class RouteController : Controller
             .Where(e => e.Login.Role.RoleName == "driver")
             .ToListAsync(), "Id", "LastName", route.EmployeeId);
 
-        return RedirectToAction("Index");
+        return View(route);
     }
+
 
     // POST: Routes/Delete/5
     [HttpPost, ActionName("DeleteConfirmed")]
