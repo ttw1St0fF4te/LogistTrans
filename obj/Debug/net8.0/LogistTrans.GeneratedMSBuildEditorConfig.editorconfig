@@ -26,12 +26,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminEmployees/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5FbXBsb3llZXMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminEmployees/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5FbXBsb3llZXMvSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminNotifications/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Ob3RpZmljYXRpb25zL0NyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminNotifications/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5Ob3RpZmljYXRpb25zL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminOrders/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5PcmRlcnMvQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/AdminOrders/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW5PcmRlcnMvSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/keluch/Desktop/coledj/ed_practice/LT/LogistTrans/LogistTrans/Views/Home/Index.cshtml]

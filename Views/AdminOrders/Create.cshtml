@@ -1,0 +1,17 @@
+@model LogistTrans.Models.Order
+
+<h2>Создать заказ</h2>
+
+<form asp-action="Create">
+    <div class="form-group">
+        <label asp-for="ClientId"></label>
+        <select asp-for="ClientId" class="form-control" asp-items="ViewBag.ClientId"></select>
+        <span asp-validation-for="ClientId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="DeliveryDate"></label>
+        <input asp-for="DeliveryDate" class="form-control" type="datetime-local" />
+        <span asp-validation-for="DeliveryDate" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Создать</button>
+</form>
