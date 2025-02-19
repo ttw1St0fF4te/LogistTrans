@@ -191,6 +191,41 @@ namespace LogistTrans.Migrations
                     b.ToTable("Roles");
                 });
 
+            modelBuilder.Entity("LogistTrans.Models.Route", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("ArrivalTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<DateTime>("DepartureTime")
+                        .HasColumnType("timestamp with time zone");
+
+                    b.Property<double>("Distance")
+                        .HasColumnType("double precision");
+
+                    b.Property<int>("EmployeeId")
+                        .HasColumnType("integer");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("integer");
+
+                    b.Property<TimeSpan>("TravelTime")
+                        .HasColumnType("interval");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.HasIndex("OrderId");
+
+                    b.ToTable("Routes");
+                });
+
             modelBuilder.Entity("LogistTrans.Models.UserLogin", b =>
                 {
                     b.Property<int>("Id")
@@ -267,6 +302,25 @@ namespace LogistTrans.Migrations
                     b.Navigation("Order");
 
                     b.Navigation("Product");
+                });
+
+            modelBuilder.Entity("LogistTrans.Models.Route", b =>
+                {
+                    b.HasOne("LogistTrans.Models.Employee", "Employee")
+                        .WithMany()
+                        .HasForeignKey("EmployeeId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("LogistTrans.Models.Order", "Order")
+                        .WithMany()
+                        .HasForeignKey("OrderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Employee");
+
+                    b.Navigation("Order");
                 });
 
             modelBuilder.Entity("LogistTrans.Models.UserLogin", b =>

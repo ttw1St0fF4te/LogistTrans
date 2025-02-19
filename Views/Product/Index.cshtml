@@ -34,3 +34,9 @@ else
     </tbody>
 </table>
 }
+@if (User.IsInRole("logist"))
+{
+<div class="mb-3">
+    <a asp-action="Create" class="btn btn-primary">Добавить товар</a>
+</div>
+}

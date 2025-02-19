@@ -1,0 +1,27 @@
+@model IEnumerable<LogistTrans.Models.Route>
+
+<table class="table table-striped table-bordered table-hover align-middle">
+    <thead class="table-dark">
+    <tr>
+        <th scope="col" class="text-center">Расстояние</th>
+        <th scope="col" class="text-center">Время отправления</th>
+        <th scope="col" class="text-center">Время в пути</th>
+        <th scope="col" class="text-center">Время прибытия</th>
+        <th scope="col" class="text-center">ID заказа</th>
+        <th scope="col" class="text-center">Сотрудник</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td class="align-middle text-center">@item.Distance</td>
+            <td class="align-middle text-center">@item.DepartureTime.ToString("yyyy-MM-dd HH:mm")</td>
+            <td class="align-middle text-center">@item.TravelTime.TotalHours ч.</td>
+            <td class="align-middle text-center">@item.ArrivalTime.ToString("yyyy-MM-dd HH:mm")</td>
+            <td class="align-middle text-center">@item.OrderId</td>
+            <td class="align-middle text-center">@item.Employee.LastName</td>
+        </tr>
+    }
+    </tbody>
+</table>

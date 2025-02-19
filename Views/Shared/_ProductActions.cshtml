@@ -12,7 +12,6 @@
     if (user.IsInRole("logist"))
     {
         <a asp-action="Delete" asp-route-id="@Model.Id" class="btn btn-danger">Удалить</a>
-        <a asp-action="Create" class="btn btn-primary">Добавить товар</a>
     }
     else if (user.IsInRole("client"))
     {

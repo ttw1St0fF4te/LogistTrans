@@ -1,0 +1,28 @@
+@model IEnumerable<LogistTrans.Models.Route>
+
+@{
+var user = Context.User;
+}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">Маршруты</h2>
+
+    <!-- Проверка роли пользователя -->
+    @if (user.IsInRole("driver"))
+    {
+        <!-- Отображение таблицы для роли driver -->
+        @await Html.PartialAsync("_DriverView", Model)
+    }
+    else if (user.IsInRole("logist"))
+    {
+        <!-- Отображение таблицы для роли logist -->
+        @await Html.PartialAsync("_LogistView", Model)
+    }
+    else
+    {
+        <!-- Сообщение для других ролей или неавторизованных пользователей -->
+        <div class="alert alert-info text-center" role="alert">
+            У вас нет доступа к этой странице.
+        </div>
+    }
+</div>

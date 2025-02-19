@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using LogistTrans.Models;
+using Route = LogistTrans.Models.Route;
 
 namespace LogistTrans.Context;
 
@@ -17,6 +18,8 @@ public class ApplicationDbContext : DbContext
     public DbSet<Product> Products { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderItem> OrderItems { get; set; }
+    
+    public DbSet<Route> Routes { get; set; }
     
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -40,5 +43,17 @@ public class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<OrderItem>()
             .HasKey(oi => new { oi.OrderId, oi.ProductId });
+        
+        modelBuilder.Entity<Route>()
+            .HasOne(r => r.Order)
+            .WithMany()
+            .HasForeignKey(r => r.OrderId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        modelBuilder.Entity<Route>()
+            .HasOne(r => r.Employee)
+            .WithMany()
+            .HasForeignKey(r => r.EmployeeId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
